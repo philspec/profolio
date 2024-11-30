@@ -3,25 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #050505;
+  --foreground: #ffffff;
+  --neon-blue: rgb(88, 101, 242);
+  --neon-purple: rgb(162, 82, 242);
+  --neon-pink: rgb(255, 71, 242);
+  --neon-cyan: rgb(71, 242, 255);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: #030303;
+  overflow-x: hidden;
 }
+
+/* Remove grid pattern as it's now handled by Framer Motion */
+/* Custom scrollbar styles remain the same */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Add blur effect for better glow */
+.glow-blur {
+  backdrop-filter: blur(100px);
 }

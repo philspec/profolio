@@ -7,9 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes: {
+        glow: {
+          '0%, 100%': {
+            filter: 'brightness(100%)',
+          },
+          '50%': {
+            filter: 'brightness(120%)',
+          },
+        },
+      },
+      animation: {
+        'glow': 'glow 2s ease-in-out infinite',
       },
     },
   },
